@@ -1,0 +1,15 @@
+### all ignore ###
+/*
+/.**
+
+
+### dotfiles
+!.gitignore
+!.gitconfig
+!/.config/
+# !/.config/**
+# !/.config/*/
+!./config/helix/
+!./config/fish/
+!/.config/helix/**
+!/.config/fish/**
