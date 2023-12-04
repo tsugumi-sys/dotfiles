@@ -1,0 +1,4 @@
+theme = "edge_neon"
+[editor]
+true-color = true
+cursorline = true

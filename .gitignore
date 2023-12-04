@@ -8,9 +8,8 @@
 !.gitconfig
 !/.config/
 
-!./config/helix/
+!/.config/helix/
 !/.config/helix/**
-!/.config/helix/languages.toml
 
-!./config/fish/
+!/.config/fish/
 !/.config/fish/**

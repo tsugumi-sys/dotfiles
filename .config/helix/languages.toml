@@ -1,0 +1,318 @@
+###
+# Python
+###
+[language-server.ruff-lsp]
+command = "ruff-lsp"
+args = []
+# config = { settings = { jedi_config = { environment = '.venv' } } }
+
+
+[[language]]
+name = "python"
+scope = "source.python"
+roots = []
+injection-regex = "python"
+file-types = ["py"]
+comment-token = "#"
+auto-format = true
+formatter = { command = "black", args = ["-", "--quiet"] }
+language-servers = ['ruff-lsp']
+indent = { tab-width = 4, unit = "    " }
+
+[[grammar]]
+name = "python"
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "9e53981ec31b789ee26162ea335de71f02186003" }
+
+
+###
+# Javascript
+###
+[language-server.deno-lsp-javascript]
+command = "deno"
+args = ["lsp"]
+language-id = "javascript"
+config = { enable = true, lint = true, unstable = true }
+
+[[language]]
+name = "javascript"
+scope = "source.js"
+injection-regex = "^(js|javascript)$"
+file-types = ["js", "mjs"]
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+language-servers = ["deno-lsp-javascript"]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
+
+[language-server.deno-lsp-jsreact]
+command = "deno"
+args = ["lsp"]
+language-id = "javascriptreact"
+config = { enable = true, lint = true, unstable = true }
+
+
+[[language]]
+name = "jsx"
+scope = "source.jsx"
+injection-regex = "jsx"
+file-types = ["jsx"]
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+grammar = "javascript"
+language-servers = ["deno-lsp-jsreact"]
+auto-format = true
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
+
+
+[language-server.deno-lsp-ts]
+command = "deno"
+args = ["lsp"]
+language-id = "typescript"
+config = { enable = true, lint = true, unstable = true }
+
+[[language]]
+name = "typescript"
+scope = "source.ts"
+injection-regex = "^(ts|typescript)$"
+file-types = ["ts"]
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+language-servers = ["deno-lsp-ts"]
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
+
+[language-server.deno-lsp-tsx]
+command = "deno"
+args = ["lsp"]
+language-id = "typescriptreact"
+config = { enable = true, lint = true, unstable = true }
+
+[[language]]
+name = "tsx"
+scope = "source.tsx"
+injection-regex = "^(tsx)$"                                           # |typescript
+file-types = ["tsx"]
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
+
+###
+# Toml
+###
+[language-server.taplo-lsp]
+command = "taplo"
+args = ["lsp", "stdio"]
+
+[[language]]
+name = "toml"
+scope = "source.toml"
+roots = ["*.toml"]
+auto-format = true
+injection-regex = "toml"
+file-types = ["toml"]
+comment-token = "#"
+language-servers = ["taplo-lsp"]
+indent = { tab-width = 2, unit = "  " }
+
+###
+# Yaml
+###
+[language-server.yaml-lsp]
+command = "yaml-language-server"
+args = ["--stdio"]
+language-id = "yaml"
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+file-types = ["yml", "yaml"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+injection-regex = "yml|yaml"
+auto-format = true
+language-servers = ["yaml-lsp"]
+formatter = { command = 'yamlfmt' }
+
+
+###
+# Markdown
+###
+# [[language]]
+# name = "markdown"
+# scope = "text.markdown"
+# roots = []
+# auto-format = true
+# file-types = ["md"]
+# comment-token = "#"
+# language-server = { command = "marksman" }
+# formatter = { command = 'deno', args = ["fmt", "-", "--ext", "md"] }
+
+
+###
+# Terraform
+###
+[language-server.terraform-lsp]
+command = "terraform-ls"
+args = ["serve"]
+language-id = "terraform"
+
+[[language]]
+name = "hcl"
+scope = "source.hcl"
+injection-regex = "(hcl|tf|nomad)"
+file-types = ["hcl", "tf", "nomad"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["terraform-lsp"]
+auto-format = true
+
+[language-server.terraform-vars-lsp]
+command = "terraform-ls"
+args = ["serve"]
+language-id = "terraform-vars"
+
+
+[[language]]
+name = "tfvars"
+scope = "source.tfvars"
+file-types = ["tfvars"]
+roots = []
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+auto-format = true
+grammar = "hcl"
+
+###
+# Latex
+###
+[language-server.tex-lsp]
+command = "texlab"
+
+[[language]]
+name = "latex"
+scope = "source.tex"
+injection-regex = "tex"
+file-types = ["tex"]
+roots = []
+comment-token = "%"
+language-servers = ["texlab"]
+indent = { tab-width = 4, unit = "\t" }
+
+[[grammar]]
+name = "latex"
+source = { git = "https://github.com/latex-lsp/tree-sitter-latex", rev = "6b7ea839307670e6bda011f888717d3a882ecc09" }
+
+[[language]]
+name = "bibtex"
+scope = "source.bib"
+injection-regex = "bib"
+file-types = ["bib"]
+roots = []
+comment-token = "%"
+language-servers = ["tex-lsp"]
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[language.formatter]
+command = 'bibtex-tidy'
+args = [
+  "-",
+  "--curly",
+  "--drop-all-caps",
+  "--remove-empty-fields",
+  "--sort-fields",
+  "--sort=year,author,id",
+  "--strip-enclosing-braces",
+  "--trailing-commas",
+]
+
+[[grammar]]
+name = "bibtex"
+source = { git = "https://github.com/latex-lsp/tree-sitter-bibtex", rev = "ccfd77db0ed799b6c22c214fe9d2937f47bc8b34" }
+
+###
+# Ruby
+###
+[language-server.ruby-lsp]
+command = "solargraph"
+args = ["stdio"]
+
+
+[[language]]
+name = "ruby"
+scope = "source.ruby"
+injection-regex = "ruby"
+file-types = [
+  "rb",
+  "rake",
+  "rakefile",
+  "irb",
+  "gemfile",
+  "gemspec",
+  "Rakefile",
+  "Gemfile",
+  "rabl",
+  "jbuilder",
+  "jb",
+  "Podfile",
+  "podspec",
+  "Vagrantfile",
+  "Brewfile",
+]
+shebangs = ["ruby"]
+roots = []
+comment-token = "#"
+language-servers = ["ruby-lsp"]
+formatter = { command = "rubocop", args = [
+  "--stdin",
+  "%",
+  "-a",
+  "--stderr",
+  "--fail-level",
+  "fatal",
+] }
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "ruby"
+source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "206c7077164372c596ffa8eaadb9435c28941364" }
+
+
+###
+# Rust
+###
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = false
+inlayHints.closingBraceHints.minLines = 10
+inlayHints.closureReturnTypeHints.enable = "with_block"
+inlayHints.discriminantHints.enable = "fieldless"
+inlayHints.lifetimeElisionHints.enable = "skip_trivial"
+inlayHints.typeHints.hideClosureInitialization = false
+
+[[grammar]]
+name = "rust"
+source = { git = "https://github.com/tree-sitter/tree-sitter-rust", rev = "0431a2c60828731f27491ee9fdefe25e250ce9c9" }
+
+[[language]]
+name = "rust"
+scope = "source.rust"
+injection-regex = "rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+comment-token = "//"
+language-servers = ["rust-analyzer"]
+indent = { tab-width = 4, unit = "    " }
