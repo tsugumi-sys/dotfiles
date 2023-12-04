@@ -13,3 +13,6 @@
 
 !/.config/fish/
 !/.config/fish/**
+
+!/.config/gh/
+!/.config/gh/config.yml
