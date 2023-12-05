@@ -1,4 +1,6 @@
-theme = "edge_neon"
+# favorite themes:
+#   colibri (default theme)
+theme = "colibri"
 [editor]
 true-color = true
 cursorline = true
