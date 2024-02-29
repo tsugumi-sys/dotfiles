@@ -1,22 +1,22 @@
 ###
 # Python
 ###
-[language-server.ruff-lsp]
-command = "ruff-lsp"
-args = []
-# config = { settings = { jedi_config = { environment = '.venv' } } }
+[language-server]
+ruff-lsp = { command = "ruff-lsp" }
+pylsp = { command = "pylsp" }
 
+[language-s]
 
 [[language]]
 name = "python"
 scope = "source.python"
-roots = []
+roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 injection-regex = "python"
 file-types = ["py"]
 comment-token = "#"
 auto-format = true
 formatter = { command = "black", args = ["-", "--quiet"] }
-language-servers = ['ruff-lsp']
+language-servers = ["ruff-lsp", "pylsp"]
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
