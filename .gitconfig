@@ -1,25 +1,38 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Akira Noda
+	email = akira.noda@onecareer.com
+# Please adapt and uncomment the following lines:
+#	name = Akira Noda
+#	email = akira.noda@onecareer.jp
+[pull]
+	rebase = false
+
 [core]
     pager = delta
+	editor = hx
 
 [interactive]
     diffFilter = delta --color-only
 
 [delta]
-    navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    navigate = true
 
 [merge]
     conflictstyle = diff3
 
-[diff]
-    colorMoved = default
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 
-[user]
-	email = tidemark0105@gmail.com
-	name = tsugumi-sys
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+[diff]
+  tool = difftastic
+  external = difft
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+  difftool = true

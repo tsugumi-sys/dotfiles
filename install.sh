@@ -10,3 +10,6 @@ sudo ln -s "$DOTFILES/helix" "$HOME/.config/helix"
 
 rm -rf "$HOME/.config/gh"
 sudo ln -s "$DOTFILES/gh" "$HOME/.config/gh"
+
+rm -rf "$HOME/.gitconfig"
+sudo ln -s "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
