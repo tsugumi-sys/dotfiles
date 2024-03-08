@@ -1,18 +1,8 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    fish_add_path /home/akira/.local/bin
-    fish_add_path /home/akira
-    fish_add_path /home/akira/.deno/bin/deno
+    fish_add_path "$HOME/.local/bin"
     export PATH="$HOME/.cargo/bin:$PATH"
-    eval (pyenv init - | source)
     starship init fish | source
-
-    set -x GOROOT "/usr/local/go"
-    set -x GOPATH "$HOME/go"
-    set -x PATH $PATH "/usr/local/go/bin"
-    
-    set -x DENO_INSTALL /home/akira/.deno
-    set -x PATH $DENO_INSTALL/bin:$PATH
 
     ###
     # Aliases for Git
@@ -57,11 +47,3 @@ if status is-interactive
     abbr -a gsts git stash save
     abbr -a gs git status
 end
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /home/akira/miniconda3/bin/conda
-    eval /home/akira/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-end
-# <<< conda initialize <<<
-
