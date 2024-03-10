@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Akira Noda
-	email = akira.noda@onecareer.com
+	name = tsugumi-sys
+	email = tidemark0105@gmail.com
 # Please adapt and uncomment the following lines:
 #	name = Akira Noda
 #	email = akira.noda@onecareer.jp
@@ -23,7 +23,8 @@
 
 [credential]
 	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
+	# helper = /usr/local/share/gcm-core/git-credential-manager
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-wincred.exe
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 
