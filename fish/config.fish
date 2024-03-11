@@ -47,3 +47,14 @@ if status is-interactive
     abbr -a gsts git stash save
     abbr -a gs git status
 end
+
+set -l os (uname)
+switch (uname)
+    case Darwin
+        # do things for macOS
+        eval (/opt/homebrew/bin/brew shellenv)
+    case Linux
+        # do things for Linux
+    case '*'
+        # do things for other OSs
+end
