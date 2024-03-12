@@ -13,3 +13,11 @@ sudo ln -s "$DOTFILES/gh" "$HOME/.config/gh"
 
 rm -rf "$HOME/.gitconfig"
 sudo ln -s "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
+
+uname=$(uname -s)
+rm -rf "$HOME/.gitconfig.os"
+if [ $uname = "Darwin" ]; then
+  sudo ln -s "$DOTFILES/.gitconfig.mac" "$HOME/.gitconfig.os"
+else
+  sudo ln -s "$DOTFILES/.gitconfig.linux" "$HOME/.gitconfig.os"
+fi
