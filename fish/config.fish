@@ -50,7 +50,7 @@ if status is-interactive
     ###
     # Aliases for GitHub CLI
     ###
-    abbr -a ghc gh pr create -B develop -a @me
+    abbr -a ghpc gh pr create -a @me -B 
     abbr -a ghpe gh pr edit
     abbr -a ghpv gh pr view --web
     abbr -a ghrv gh repo view --web
