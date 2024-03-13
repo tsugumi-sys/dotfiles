@@ -46,6 +46,14 @@ if status is-interactive
     abbr -a gstp git stash pop
     abbr -a gsts git stash save
     abbr -a gs git status
+
+    ###
+    # Aliases for GitHub CLI
+    ###
+    abbr -a ghpc gh pr create -a @me -B 
+    abbr -a ghpe gh pr edit
+    abbr -a ghpv gh pr view --web
+    abbr -a ghrv gh repo view --web
 end
 
 set -l os (uname)
