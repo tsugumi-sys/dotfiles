@@ -20,4 +20,5 @@ if [ $uname = "Darwin" ]; then
   sudo ln -s "$DOTFILES/.gitconfig.mac" "$HOME/.gitconfig.os"
 else
   sudo ln -s "$DOTFILES/.gitconfig.linux" "$HOME/.gitconfig.os"
+  git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 fi
