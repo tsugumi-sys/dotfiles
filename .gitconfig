@@ -1,5 +1,6 @@
 [include]
 	path = .gitconfig.os
+
 # This is Git's per-user configuration file.
 [user]
 	name = tsugumi-sys
@@ -23,9 +24,6 @@
 [merge]
     conflictstyle = diff3
 
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-
 [diff]
   tool = difftastic
   external = difft
@@ -35,3 +33,5 @@
   cmd = difft "$LOCAL" "$REMOTE"
 [pager]
   difftool = true
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe
