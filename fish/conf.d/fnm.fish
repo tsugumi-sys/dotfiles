@@ -7,6 +7,8 @@ switch (uname)
         /opt/homebrew/bin/fnm env | source
     case Linux
         # do things for Linux
+        set PATH "$HOME/.fnm" $PATH
+        fnm env | source
     case '*'
         # do things for other OSs
 end

@@ -17,6 +17,10 @@ SETUVAR _fish_abbr_gcpa:git\x20cherry\x2dpick\x20\x2d\x2dabort
 SETUVAR _fish_abbr_gcpc:git\x20cherry\x2dpick\x20\x2d\x2dcontinue
 SETUVAR _fish_abbr_gdb:git\x20branch\x20\x2dD
 SETUVAR _fish_abbr_gf:git\x20fetch
+SETUVAR _fish_abbr_ghpc:gh\x20pr\x20create\x20\x2da\x20\x40me\x20\x2dB
+SETUVAR _fish_abbr_ghpe:gh\x20pr\x20edit
+SETUVAR _fish_abbr_ghpv:gh\x20pr\x20view\x20\x2d\x2dweb
+SETUVAR _fish_abbr_ghrv:gh\x20repo\x20view\x20\x2d\x2dweb
 SETUVAR _fish_abbr_gl:git\x20log
 SETUVAR _fish_abbr_glo:git\x20log\x20\x2d\x2doneline
 SETUVAR _fish_abbr_gnb:git\x20switch\x20\x2dc
