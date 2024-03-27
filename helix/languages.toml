@@ -145,10 +145,10 @@ language-servers = ["yaml-lsp"]
 [language-server.terraform-lsp]
 command = "terraform-ls"
 args = ["serve"]
-language-id = "terraform"
 
 [[language]]
 name = "hcl"
+language-id = "terraform"
 scope = "source.hcl"
 injection-regex = "(hcl|tf|nomad)"
 file-types = ["hcl", "tf", "nomad"]
@@ -166,6 +166,7 @@ language-id = "terraform-vars"
 
 [[language]]
 name = "tfvars"
+language-id = "terraform-vars"
 scope = "source.tfvars"
 file-types = ["tfvars"]
 roots = []
