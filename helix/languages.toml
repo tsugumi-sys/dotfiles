@@ -11,7 +11,6 @@ scope = "source.python"
 roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 injection-regex = "python"
 file-types = ["py"]
-comment-token = "#"
 auto-format = true
 formatter = { command = "black", args = ["-", "--quiet"] }
 language-servers = ["ruff-lsp", "pylsp"]
@@ -38,7 +37,6 @@ injection-regex = "^(js|javascript)$"
 file-types = ["js", "mjs"]
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
-comment-token = "//"
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
 language-servers = ["deno-lsp-javascript"]
@@ -58,7 +56,6 @@ injection-regex = "jsx"
 file-types = ["jsx"]
 shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
-comment-token = "//"
 indent = { tab-width = 2, unit = "  " }
 grammar = "javascript"
 language-servers = ["deno-lsp-jsreact"]
@@ -115,7 +112,6 @@ roots = ["*.toml"]
 auto-format = true
 injection-regex = "toml"
 file-types = ["toml"]
-comment-token = "#"
 language-servers = ["taplo-lsp"]
 indent = { tab-width = 2, unit = "  " }
 
@@ -132,7 +128,6 @@ name = "yaml"
 scope = "source.yaml"
 file-types = ["yml", "yaml"]
 roots = []
-comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 injection-regex = "yml|yaml"
 auto-format = true
@@ -153,7 +148,6 @@ scope = "source.hcl"
 injection-regex = "(hcl|tf|nomad)"
 file-types = ["hcl", "tf", "nomad"]
 roots = []
-comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 language-servers = ["terraform-lsp"]
 auto-format = true
@@ -170,7 +164,6 @@ language-id = "terraform-vars"
 scope = "source.tfvars"
 file-types = ["tfvars"]
 roots = []
-comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
 grammar = "hcl"
@@ -187,7 +180,6 @@ scope = "source.tex"
 injection-regex = "tex"
 file-types = ["tex"]
 roots = []
-comment-token = "%"
 language-servers = ["texlab"]
 indent = { tab-width = 4, unit = "\t" }
 
@@ -201,7 +193,6 @@ scope = "source.bib"
 injection-regex = "bib"
 file-types = ["bib"]
 roots = []
-comment-token = "%"
 language-servers = ["tex-lsp"]
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
@@ -254,7 +245,6 @@ file-types = [
 ]
 shebangs = ["ruby"]
 roots = []
-comment-token = "#"
 language-servers = ["ruby-lsp"]
 formatter = { command = "rubocop", args = [
   "--stdin",
@@ -297,6 +287,5 @@ injection-regex = "rust"
 file-types = ["rs"]
 roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
-comment-token = "//"
 language-servers = ["rust-analyzer"]
 indent = { tab-width = 4, unit = "    " }
