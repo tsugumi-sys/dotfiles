@@ -54,6 +54,20 @@ if status is-interactive
     abbr -a ghpe gh pr edit
     abbr -a ghpv gh pr view --web
     abbr -a ghrv gh repo view --web
+
+    ###
+    # Aliases for Docker
+    ###
+    abbr -a dpa docker ps -a
+    abbr -a dp docker ps
+    abbr -a dl docker logs
+    abbr -a ds docker stop
+    abbr -a dr docker rm
+    abbr -a dri docker rmi
+    abbr -a dcu docker compose up -d
+    abbr -a dcd docker compose down
+    abbr -a dip docker image prune
+    abbr -a dvp docker volume prune
 end
 
 set -l os (uname)
