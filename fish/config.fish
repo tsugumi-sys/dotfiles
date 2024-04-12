@@ -68,6 +68,13 @@ if status is-interactive
     abbr -a dcd docker compose down
     abbr -a dip docker image prune
     abbr -a dvp docker volume prune
+
+    ###
+    # Aliases for Ruby
+    ###
+    abbr -a bi bundle install
+    abbr -a bers bundle exec rspec
+    abbr -a beru bundle exec rubocop -a
 end
 
 set -l os (uname)
