@@ -50,7 +50,7 @@ if status is-interactive
     ###
     # Aliases for GitHub CLI
     ###
-    abbr -a ghpc gh pr create -a @me -B 
+    abbr -a ghpc gh pr create -a @me -B
     abbr -a ghpe gh pr edit
     abbr -a ghpv gh pr view --web
     abbr -a ghrv gh repo view --web
@@ -68,6 +68,7 @@ if status is-interactive
     abbr -a dcd docker compose down
     abbr -a dip docker image prune
     abbr -a dvp docker volume prune
+    abbr -a de docker exec -it
 
     ###
     # Aliases for Ruby
