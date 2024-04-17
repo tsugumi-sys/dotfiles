@@ -54,6 +54,7 @@ if status is-interactive
     abbr -a ghpe gh pr edit
     abbr -a ghpv gh pr view --web
     abbr -a ghrv gh repo view --web
+    abbr -a ghic gh issue create
 
     ###
     # Aliases for Docker
