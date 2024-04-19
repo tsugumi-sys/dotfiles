@@ -20,6 +20,7 @@ if status is-interactive
     abbr -a gcp git cherry-pick
     abbr -a gcpa git cherry-pick --abort
     abbr -a gcpc git cherry-pick --continue
+    abbr -a gm git merge
     abbr -a gsw git switch
     abbr -a gsd git switch develop
     abbr -a gsm git switch main
