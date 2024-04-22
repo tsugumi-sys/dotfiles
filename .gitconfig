@@ -20,16 +20,19 @@
 
 [delta]
     navigate = true
+	side-by-side = true
 
 [merge]
     conflictstyle = diff3
 
 [diff]
   tool = difftastic
-  external = difft
+
 [difftool]
   prompt = false
+
 [difftool "difftastic"]
   cmd = difft "$LOCAL" "$REMOTE"
+
 [pager]
   difftool = true
