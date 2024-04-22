@@ -2,8 +2,13 @@
 # VERSION: 3.0
 SETUVAR --export PYENV_ROOT:/home/akira/\x2epyenv
 SETUVAR __fish_initialized:3400
+SETUVAR _fish_abbr_bers:bundle\x20exec\x20rspec
+SETUVAR _fish_abbr_beru:bundle\x20exec\x20rubocop\x20\x2da
+SETUVAR _fish_abbr_bi:bundle\x20install
 SETUVAR _fish_abbr_dcd:docker\x20compose\x20down
 SETUVAR _fish_abbr_dcu:docker\x20compose\x20up\x20\x2dd
+SETUVAR _fish_abbr_de:docker\x20exec\x20\x2dit
+SETUVAR _fish_abbr_difft:difftastic
 SETUVAR _fish_abbr_dip:docker\x20image\x20prune
 SETUVAR _fish_abbr_dl:docker\x20logs
 SETUVAR _fish_abbr_dp:docker\x20ps
@@ -27,6 +32,7 @@ SETUVAR _fish_abbr_gcpa:git\x20cherry\x2dpick\x20\x2d\x2dabort
 SETUVAR _fish_abbr_gcpc:git\x20cherry\x2dpick\x20\x2d\x2dcontinue
 SETUVAR _fish_abbr_gdb:git\x20branch\x20\x2dD
 SETUVAR _fish_abbr_gf:git\x20fetch
+SETUVAR _fish_abbr_ghic:gh\x20issue\x20create
 SETUVAR _fish_abbr_ghpc:gh\x20pr\x20create\x20\x2da\x20\x40me\x20\x2dB
 SETUVAR _fish_abbr_ghpe:gh\x20pr\x20edit
 SETUVAR _fish_abbr_ghpv:gh\x20pr\x20view\x20\x2d\x2dweb
