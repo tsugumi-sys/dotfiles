@@ -67,7 +67,11 @@ formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 command = "deno"
 args = ["lsp"]
 language-id = "typescript"
-config = { enable = true, lint = true, unstable = true }
+
+[language-server.deno-lsp-ts.config.deno]
+enable = true
+unstable = true
+lint = true
 
 [[language]]
 name = "typescript"
