@@ -1,4 +1,15 @@
 if status is-interactive
+    set -l os (uname)
+    switch (uname)
+        case Darwin
+            # do things for macOS
+            eval (/opt/homebrew/bin/brew shellenv)
+        case Linux
+            # do things for Linux
+        case '*'
+            # do things for other OSs
+    end
+
     # Commands to run in interactive sessions can go here
     fish_add_path "$HOME/.local/bin"
     export PATH="$HOME/.cargo/bin:$PATH"
@@ -79,15 +90,4 @@ if status is-interactive
     abbr -a bi bundle install
     abbr -a bers bundle exec rspec
     abbr -a beru bundle exec rubocop -a
-end
-
-set -l os (uname)
-switch (uname)
-    case Darwin
-        # do things for macOS
-        eval (/opt/homebrew/bin/brew shellenv)
-    case Linux
-        # do things for Linux
-    case '*'
-        # do things for other OSs
 end
