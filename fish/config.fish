@@ -13,7 +13,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_add_path "$HOME/.local/bin"
     export PATH="$HOME/.cargo/bin:$PATH"
-    starship init fish | source
 
     ###
     # Aliases for Git
@@ -90,4 +89,10 @@ if status is-interactive
     abbr -a bi bundle install
     abbr -a bers bundle exec rspec
     abbr -a beru bundle exec rubocop -a
+
+    ###
+    # Common libraries
+    ###
+    starship init fish | source
+    zoxide init fish | source
 end
