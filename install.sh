@@ -17,6 +17,10 @@ sudo ln -s "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 rm -rf "$HOME/.config/starship.toml"
 sudo ln -s "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 
+rm -rf "$HOME/.config/gitui"
+sudo ln -s "$DOTFILES/gitui" "$HOME/.config/gitui"
+
+
 uname=$(uname -s)
 rm -rf "$HOME/.gitconfig.os"
 if [ $uname = "Darwin" ]; then
