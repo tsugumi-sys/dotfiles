@@ -26,6 +26,7 @@ if status is-interactive
     abbr -a gcl git clone
     abbr -a gc git commit -m
     abbr -a gca git commit --amend
+    abbr -a gcan git commit --amend --no-edit
     abbr -a gcam git commit --amend -m
     abbr -a gcp git cherry-pick
     abbr -a gcpa git cherry-pick --abort
