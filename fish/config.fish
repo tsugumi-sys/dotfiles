@@ -50,7 +50,7 @@ if status is-interactive
     abbr -a grs git reset --soft
     abbr -a grm git reset --mixed
     abbr -a grh git reset --hard
-    abbr -a gcan git reset --hard HEAD~
+    # abbr -a gcan git reset --hard HEAD~
     abbr -a gclr git reset --hard HEAD
     abbr -a gst git stash -u
     abbr -a gsta git stash apply
