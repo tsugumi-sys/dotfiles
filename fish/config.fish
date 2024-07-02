@@ -59,7 +59,7 @@ if status is-interactive
     abbr -a gstp git stash pop
     abbr -a gsts git stash save
     abbr -a gs git status
-    abbr -a gdmb git branch --merged | egrep -v '\*' | xargs git branch -d
+    abbr -a gdmb "git branch --merged | egrep -v '\*' | xargs git branch -d"
 
     ###
     # Aliases for GitHub CLI
