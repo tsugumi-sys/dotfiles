@@ -20,6 +20,8 @@ sudo ln -s "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 rm -rf "$HOME/.config/gitui"
 sudo ln -s "$DOTFILES/gitui" "$HOME/.config/gitui"
 
+rm -rf "$HOME/.tmux.conf"
+sudo ln -s "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 uname=$(uname -s)
 rm -rf "$HOME/.gitconfig.os"
