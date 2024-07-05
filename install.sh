@@ -20,8 +20,8 @@ sudo ln -s "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 rm -rf "$HOME/.config/gitui"
 sudo ln -s "$DOTFILES/gitui" "$HOME/.config/gitui"
 
-rm -rf "$HOME/.tmux.conf"
-sudo ln -s "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+rm -rf "$HOME/.config/zellij"
+sudo ln -s "$DOTFILES/zellij" "$HOME/.config/zellij"
 
 uname=$(uname -s)
 rm -rf "$HOME/.gitconfig.os"
@@ -29,5 +29,4 @@ if [ $uname = "Darwin" ]; then
   sudo ln -s "$DOTFILES/.gitconfig.mac" "$HOME/.gitconfig.os"
 else
   sudo ln -s "$DOTFILES/.gitconfig.linux" "$HOME/.gitconfig.os"
-  # git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager-core.exe"
 fi
