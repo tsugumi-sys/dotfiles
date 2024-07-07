@@ -1,3 +1,4 @@
+mouse_mode false
 keybinds {
     // keybinds are divided into modes
     normal {
