@@ -13,6 +13,8 @@ keybinds {
         bind "l" "Right" { MoveFocus "Right"; }
         bind "j" "Down" { MoveFocus "Down"; }
         bind "k" "Up" { MoveFocus "Up"; }
+        bind "v" { NewPane "Right"; }
+        bind "s" { NewPane "Down"; }
         bind "p" { SwitchFocus; }
     }
     locked {
