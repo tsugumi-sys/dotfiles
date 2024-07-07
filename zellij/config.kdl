@@ -8,8 +8,8 @@ keybinds {
         bind "Ctrl Space" { SwitchToMode "pane"; }
         bind "Alt n" { NewPane; }
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
-        bind "Ctrl j" { PageScrollUp; }
-        bind "Ctrl k" { PageScrollDown; }
+        bind "Ctrl k" { PageScrollUp; }
+        bind "Ctrl j" { PageScrollDown; }
     }
     pane {
         bind "h" "Left" { MoveFocus "Left"; }
