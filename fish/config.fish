@@ -40,7 +40,7 @@ if status is-interactive
     abbr -a gl git log
     abbr -a glo git log --oneline
     abbr -a gpl git pull origin
-    abbr -a gp git push -u origin
+    abbr -a gp git push -u origin $(git rev-parse --abbrev-ref HEAD)
     abbr -a gpf git push --force-with-lease -u origin
     abbr -a gpff git push -fu origin
     abbr -a gri git rebase -i
