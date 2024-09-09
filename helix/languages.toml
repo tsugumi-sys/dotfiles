@@ -20,6 +20,19 @@ indent = { tab-width = 4, unit = "    " }
 name = "python"
 source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "d6210ceab11e8d812d4ab59c07c81458ec6e5184" }
 
+###
+# Biome
+###
+[language-server.biome]
+command = "biome"
+args = ["lsp-proxy"]
+
+###
+# Json
+###
+[[language]]
+name = "json"
+language-servers = [ { name = "vscode-json-language-server" }, "biome" ]
 
 ###
 # Javascript
@@ -39,7 +52,7 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-language-servers = ["deno-lsp-javascript"]
+language-servers = ["deno-lsp-javascript", "biome"]
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js"] }
 
 [language-server.deno-lsp-jsreact]
@@ -58,7 +71,7 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 grammar = "javascript"
-language-servers = ["deno-lsp-jsreact"]
+language-servers = ["deno-lsp-jsreact", "biome"]
 auto-format = true
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 
@@ -82,8 +95,7 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-language-servers = ["deno-lsp-ts"]
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts"] }
+language-servers = ["deno-lsp-ts", "biome"]
 
 [language-server.deno-lsp-tsx]
 command = "deno"
@@ -100,7 +112,22 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-formatter = { command = 'deno', args = ["fmt", "-", "--ext", "tsx"] }
+language-servers = ["deno-lsp-tsx", "biome"]
+
+### 
+# Svelte
+###
+[[language]]
+name = "svelte"
+scope = "source.svelte"
+injection-regex = "svelte"
+file-types = ["svelte"]
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "svelteserver", "biome" ]
+
+[[grammar]]
+name = "svelte"
+source = { git = "https://github.com/Himujjal/tree-sitter-svelte", rev = "be7f2e7db1fc19f0852265ec60923fc058380739" }
 
 ###
 # Toml
