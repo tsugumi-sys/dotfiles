@@ -124,6 +124,8 @@ injection-regex = "svelte"
 file-types = ["svelte"]
 indent = { tab-width = 2, unit = "  " }
 language-servers = [ "svelteserver", "biome" ]
+auto-format = true
+formatter = { command = 'prettier', args = ["--plugin", "prettier-plugin-svelte", "--stdin"] }
 
 [[grammar]]
 name = "svelte"
