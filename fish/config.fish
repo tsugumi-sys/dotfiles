@@ -87,6 +87,7 @@ if status is-interactive
     abbr -a dcu docker compose up -d
     abbr -a dcd docker compose down
     abbr -a dip docker image prune
+    abbr -a dv docker volume
     abbr -a dvp docker volume prune
     abbr -a de docker exec -it
 
