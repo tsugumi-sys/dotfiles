@@ -4,3 +4,11 @@ theme = "colibri"
 [editor]
 true-color = true
 cursorline = true
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+'<' = '>'

@@ -12,7 +12,6 @@ roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 injection-regex = "python"
 file-types = ["py"]
 auto-format = true
-formatter = { command = "black", args = ["-", "--quiet"] }
 language-servers = ["ruff-lsp", "pylsp"]
 indent = { tab-width = 4, unit = "    " }
 
@@ -86,6 +85,11 @@ enable = true
 unstable = true
 lint = true
 
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+config.hostInfo = "helix"
+
 [[language]]
 name = "typescript"
 scope = "source.ts"
@@ -95,7 +99,7 @@ shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 auto-format = true
-language-servers = ["deno-lsp-ts", "biome"]
+language-servers = ["deno-lsp-ts", "biome", "typescript-language-server"]
 
 [language-server.deno-lsp-tsx]
 command = "deno"
