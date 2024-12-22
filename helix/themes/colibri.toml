@@ -45,7 +45,7 @@ label = "honey"
 
 "ui.background" = { bg = "midnight" }
 "ui.background.separator" = { fg = "comet" }
-"ui.linenr" = { fg = "comet" }
+"ui.linenr" = { fg = "lavender" }
 "ui.linenr.selected" = { fg = "lilac" }
 "ui.statusline" = { fg = "lilac", bg = "revolver" }
 "ui.statusline.inactive" = { fg = "lavender", bg = "revolver" }
