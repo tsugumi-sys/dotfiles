@@ -288,11 +288,6 @@ name = "ruby"
 source = { git = "https://github.com/tree-sitter/tree-sitter-ruby", rev = "206c7077164372c596ffa8eaadb9435c28941364" }
 
 
-###
-# Rust
-###
-[language-server.rust-analyzer]
-command = "rust-analyzer"
 
 [language-server.rust-analyzer.config]
 inlayHints.bindingModeHints.enable = false
