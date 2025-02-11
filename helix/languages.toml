@@ -75,16 +75,6 @@ auto-format = true
 formatter = { command = 'deno', args = ["fmt", "-", "--ext", "jsx"] }
 
 
-[language-server.deno-lsp-ts]
-command = "deno"
-args = ["lsp"]
-language-id = "typescript"
-
-[language-server.deno-lsp-ts.config.deno]
-enable = true
-unstable = true
-lint = true
-
 [language-server.typescript-language-server]
 command = "typescript-language-server"
 args = ["--stdio"]
@@ -95,11 +85,10 @@ name = "typescript"
 scope = "source.ts"
 injection-regex = "^(ts|typescript)$"
 file-types = ["ts"]
-shebangs = ["deno", "node"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
 auto-format = true
-language-servers = ["deno-lsp-ts", "biome", "typescript-language-server"]
 
 [language-server.deno-lsp-tsx]
 command = "deno"
@@ -326,3 +315,36 @@ roots = ["Cargo.toml", "Cargo.lock"]
 auto-format = true
 language-servers = ["rust-analyzer"]
 indent = { tab-width = 4, unit = "    " }
+
+
+###
+# Swift
+###
+[language-server.swiftlint]
+command = "swiftlint"
+
+[[language]]
+name = "swift"
+auto-format = true
+language-servers = ["sourcekit-lsp", "swiftlint"]
+formatter = { command = "swiftformat", args = [ "--indent", "2"]}
+[language.debugger]
+command = "lldb-dap"
+name = "lldp-dap"
+port-arg = "--port {}"
+transport = "tcp"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
+
+[[grammar]]
+name = "swift"
+source = { git = "https://github.com/alex-pinkus/tree-sitter-swift", rev = "57c1c6d6ffa1c44b330182d41717e6fe37430704" }
