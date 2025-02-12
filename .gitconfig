@@ -3,8 +3,8 @@
 
 # This is Git's per-user configuration file.
 [user]
-	name = tsugumi-sys
-	email = tidemark0105@gmail.com
+	name = Akira Noda
+	email = 61897166+tsugumi-sys@users.noreply.github.com
 # Please adapt and uncomment the following lines:
 #	name = Akira Noda
 #	email = akira.noda@onecareer.jp
@@ -36,3 +36,8 @@
 
 [pager]
   difftool = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
