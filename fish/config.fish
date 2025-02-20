@@ -50,6 +50,7 @@ if status is-interactive
     abbr -a grs git reset --soft
     abbr -a grm git reset --mixed
     abbr -a grh git reset --hard
+    abbr -a gmf git diff --name-only --relative --diff-filter=M
     # abbr -a gcan git reset --hard HEAD~
     abbr -a gclr git reset --hard HEAD
     abbr -a gst git stash -u
