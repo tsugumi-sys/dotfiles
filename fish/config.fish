@@ -100,9 +100,26 @@ if status is-interactive
     abbr -a beru bundle exec rubocop -a
 
     ###
+    # Aliases for typos
+    ###
+    abbr -a ty typos -w
+
+    ###
     # Common libraries
     ###
     starship init fish | source
     zoxide init fish | source
     mise activate fish | source
+    direnv hook fish | source
+    set -x EDITOR hx
+    fish_add_path "$HOME/Library/Android/sdk/platform-tools/"
+    export ANDROID_HOME="$HOME/Library/Android/sdk"
+    export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+    fish_add_path "$ANDROID_HOME/emulator"
+    fish_add_path "$ANDROID_HOME/platform-tools"
+
+    fish_add_path -m ~/.local/bin
 end
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
