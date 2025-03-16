@@ -100,6 +100,11 @@ if status is-interactive
     abbr -a beru bundle exec rubocop -a
 
     ###
+    # Aliases for typos
+    ###
+    abbr -a ty typos -w
+
+    ###
     # Common libraries
     ###
     starship init fish | source

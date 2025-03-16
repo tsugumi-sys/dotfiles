@@ -88,24 +88,7 @@ file-types = ["ts"]
 roots = ["deno.json", "package.json", "tsconfig.json"]
 indent = { tab-width = 2, unit = "  " }
 language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] }, "biome" ]
-auto-format = true
-
-[language-server.deno-lsp-tsx]
-command = "deno"
-args = ["lsp"]
-language-id = "typescriptreact"
-config = { enable = true, lint = true, unstable = true }
-
-[[language]]
-name = "tsx"
-scope = "source.tsx"
-injection-regex = "^(tsx)$"                                           # |typescript
-file-types = ["tsx"]
-shebangs = ["deno", "node"]
-roots = ["deno.json", "package.json", "tsconfig.json"]
-indent = { tab-width = 2, unit = "  " }
-auto-format = true
-language-servers = ["deno-lsp-tsx", "biome"]
+# auto-format = true
 
 ### 
 # Svelte
