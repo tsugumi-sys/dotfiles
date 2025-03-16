@@ -105,4 +105,15 @@ if status is-interactive
     starship init fish | source
     zoxide init fish | source
     mise activate fish | source
+
+    ###
+    # Android SDK
+    ###
+    set -g -x JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+    set -x ANDROID_HOME $HOME/Library/Android/sdk
+    set -x PATH $PATH:$ANDROID_HOME/emulator
+    set -x PATH $PATH:$ANDROID_HOME/platform-tools
 end
+
+# Generated for envman. Do not edit.
+test -s ~/.config/envman/load.fish; and source ~/.config/envman/load.fish
