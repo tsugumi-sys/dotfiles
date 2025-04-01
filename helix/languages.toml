@@ -2,8 +2,12 @@
 # Python
 ###
 [language-server]
-ruff-lsp = { command = "ruff-lsp" }
 pylsp = { command = "pylsp" }
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
 
 [[language]]
 name = "python"
@@ -12,7 +16,7 @@ roots = ["pyproject.toml", "setup.py", "poetry.lock", "pyrightconfig.json"]
 injection-regex = "python"
 file-types = ["py"]
 auto-format = true
-language-servers = ["ruff-lsp", "pylsp"]
+language-servers = ["ruff", "pylsp"]
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
