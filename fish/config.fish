@@ -75,6 +75,7 @@ if status is-interactive
     abbr -a ghie gh issue edit
     abbr -a ghiv gh issue view --web
     abbr -a ghil gh issue list -a @me
+    abbr -a ghda gh dash
 
     ###
     # Aliases for Docker
