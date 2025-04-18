@@ -71,7 +71,7 @@ if status is-interactive
     abbr -a ghpv gh pr view --web
     abbr -a ghpl gh pr list -a @me
     abbr -a ghrv gh repo view --web
-    abbr -a ghic gh issue create
+    abbr -a ghic gh issue create -a @me -t
     abbr -a ghie gh issue edit
     abbr -a ghiv gh issue view --web
     abbr -a ghil gh issue list -a @me
