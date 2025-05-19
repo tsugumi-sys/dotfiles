@@ -1,0 +1,19 @@
+# Github CLI (gh command) Examples
+
+## Pull Requests
+gh pr create -a @me -B     # Create a PR assigned to me, specify base branch
+gh pr edit                 # Edit the current PR
+gh pr view --web           # Open the current PR in the browser
+gh pr list -a @me          # List PRs assigned to me
+
+## Repositories
+gh repo view --web         # Open current repo in the browser
+
+## Issues
+gh issue create -a @me -t  # Create a new issue assigned to me, prompt for title
+gh issue edit              # Edit the current issue
+gh issue view --web        # Open the current issue in the browser
+gh issue list -a @me       # List issues assigned to me
+
+## Dashboard
+gh dash                    # Launch GitHub CLI dashboard

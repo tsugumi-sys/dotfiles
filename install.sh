@@ -26,6 +26,8 @@ sudo ln -s "$DOTFILES/zellij" "$HOME/.config/zellij"
 rm -rf "$HOME/.config/gh-dash"
 sudo ln -s "$DOTFILES/gh-dash" "$HOME/.config/gh-dash"
 
+sudo ln -s "$DOTFILES/goose/.goosehints" "$HOME/.config/goose.goosehints"
+
 uname=$(uname -s)
 rm -rf "$HOME/.gitconfig.os"
 if [ $uname = "Darwin" ]; then
