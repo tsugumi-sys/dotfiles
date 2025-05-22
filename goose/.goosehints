@@ -1,5 +1,9 @@
 # Github CLI (gh command) Examples
 
+If user want to create issue/pr or edit, please use the following command. Please always assign me.
+
+When you need to add newline in the body, you need to do like -b $'- [ ] a/n-[ ] b'. You need to put '$'.
+
 ## Pull Requests
 gh pr create -a @me -B     # Create a PR assigned to me, specify base branch
 gh pr edit                 # Edit the current PR
