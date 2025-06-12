@@ -62,6 +62,7 @@ if status is-interactive
     abbr -a gs git status
     abbr -a gdmb "git branch --merged | egrep -v '\*' | xargs git branch -d"
     abbr -a gscb git rev-parse --abbrev-ref HEAD
+    abbr -a gaf "git status --porcelain | grep pattern | awk '{print \$2}' | xargs git add"
 
     ###
     # Aliases for GitHub CLI
