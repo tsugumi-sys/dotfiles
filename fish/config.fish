@@ -13,6 +13,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_add_path "$HOME/.local/bin"
     export PATH="$HOME/.cargo/bin:$PATH"
+    set -gx PATH /usr/local/bin $PATH
 
     ###
     # Aliases for Git
